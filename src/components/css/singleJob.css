@@ -1,0 +1,11 @@
+.single-job-view{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-self: center;
+    align-items: center;
+}
+.single-job-view>form{
+    display: flex;
+    flex-direction: column;
+}
