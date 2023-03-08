@@ -1,4 +1,4 @@
-import { Route,Routes,Link } from 'react-router-dom';
+import { Route,Routes } from 'react-router-dom';
 import Home from './components/HomeComponent';
 import Jobs from './components/JobsComponent';
 import SingleJob from './components/SingleJobComponent';
@@ -20,7 +20,6 @@ function App() {
       })  
       setAuthintcated(true)
       } catch (error) {
-        console.log(error)  
         setAuthintcated(false)
       }
     }
@@ -28,11 +27,11 @@ function App() {
     return (
       <>
         <Routes>
-          <Route path='/'  element ={<Home />}/>
-          <Route path='/login'  element ={<Login authintcated={authintcated} />}/>
-          <Route path='/register'  element ={<Register authintcated={authintcated} />}/>
-          <Route path='/jobs'  element ={<Jobs />}/>
-          <Route path='/jobs/:id'  element ={<SingleJob />}/>
+          <Route path='/'  element ={<Home authintcated={authintcated} />}/>
+          <Route path='/login' element ={<Login url={url} authintcated={authintcated} />}/>
+          <Route path='/register'  element ={<Register url={url} authintcated={authintcated} />}/>
+          <Route path='/jobs'  element ={<Jobs url={url} authintcated={authintcated} />}/>
+          <Route path='/jobs/:id'  element ={<SingleJob url={url} authintcated={authintcated} />}/>
         </Routes>
       </>
     );

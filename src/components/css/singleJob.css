@@ -5,7 +5,50 @@
     justify-self: center;
     align-items: center;
 }
+.error{
+    display: none;
+}
+.global-error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.single-job-view>p{
+    transform: scale(120%);
+}
 .single-job-view>form{
+    margin: 1rem;
     display: flex;
     flex-direction: column;
+    transform: scale(120%);
+}
+.update-job-button{
+    margin-top: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transform: scale(100%);
+    background-color: rgb(115, 255, 0);
+    transition: all 0.2s;
+}
+.update-job-button:hover{
+    transform: scale(110%);
+}
+.single-job-view>button{
+    margin-top: 2rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transform: scale(120%);
+    background-color: rgb(255, 52, 52);
+    transition: all 0.2s;
+}
+.single-job-view>button:hover{
+    transform: scale(130%);
 }
