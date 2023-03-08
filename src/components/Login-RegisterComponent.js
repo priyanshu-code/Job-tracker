@@ -19,7 +19,7 @@ const Login =(props)=>{
         const response = await axios.post(props.url+"/api/v1/auth/login",user,
         {headers:{
           'Accept': '*/*',
-          'Content-Type':'application/json',
+          'Content-Type': 'application/json',
         }})
         localStorage.setItem("Token",response.data.token)
         localStorage.setItem("User",response.data.user.user)
@@ -63,7 +63,7 @@ const Register =(props)=>{
         const response = await axios.post(props.url+"/api/v1/auth/register",user,
         {headers:{
           'Accept': '*/*',
-          'Content-Type':'application/json',
+          'Content-Type': 'application/json',
         }})
         localStorage.setItem("Token",response.data.token)
         localStorage.setItem("User",response.data.user.user)

@@ -10,12 +10,13 @@ function App() {
     const [authintcated,setAuthintcated] =useState(false)
     const auth = localStorage.getItem("Token")
     const url = 'https://jobs-api-kx3t.onrender.com'
+    // const url = 'http://localhost:5000'
     const authCheck =async ()=>{
       try {
         await axios.get(url+'/api/v1/jobs',{
           headers:{
               'Accept': '*/*',
-              'Content-Type':'application/json',
+              'Content-Type': 'application/json',
               'Authorization':'Bearer '+auth}
       })  
       setAuthintcated(true)
