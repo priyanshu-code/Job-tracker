@@ -9,7 +9,7 @@ const Login =(props)=>{
       nav('/jobs')
     }
     const [user,setUser] = useState({email:"",password:""})
-    const url ='https://jobs-api-gk0d.onrender.com'
+    const url ='https://jobs-api-kx3t.onrender.com'
     async function handleSubmit (e){
       localStorage.removeItem("Token")
       e.preventDefault()
@@ -49,7 +49,7 @@ const Register =(props)=>{
     if (props.authintcated){
       nav('/jobs')
     }
-    const url ='https://jobs-api-gk0d.onrender.com'
+    const url ='https://jobs-api-kx3t.onrender.com'
     const [user,setUser] = useState({name:"",email:"",password:""})
     async function handleSubmit (e){
       localStorage.removeItem("Token")

@@ -5,7 +5,7 @@ import "./css/singleJob.css"
 const SingleJobs = ()=>{
     const nav = useNavigate()
     const { id }= useParams()
-    const url = 'https://jobs-api-gk0d.onrender.com'
+    const url = 'https://jobs-api-kx3t.onrender.com'
     const auth = (localStorage.getItem("Token"))
     const [updateJob,setupdateJob] = useState({company:"",position:"",status:"pending"})
     const [updated,setUpdated] =useState(false)

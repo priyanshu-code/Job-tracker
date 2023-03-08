@@ -9,7 +9,7 @@ import { useState } from 'react';
 function App() {
     const [authintcated,setAuthintcated] =useState(false)
     const auth = localStorage.getItem("Token")
-    const url = 'https://jobs-api-gk0d.onrender.com'
+    const url = 'https://jobs-api-kx3t.onrender.com'
     const authCheck =async ()=>{
       try {
         await axios.get(url+'/api/v1/jobs',{

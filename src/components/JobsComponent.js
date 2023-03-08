@@ -5,7 +5,7 @@ import "./css/allJobs.css"
 const Jobs = ()=>{
     const [createJob,setCreateJob] = useState(false)
     const [newJob,setNewJob] = useState({company:"",position:"",status:"pending"})
-    const url = 'https://jobs-api-gk0d.onrender.com'
+    const url = 'https://jobs-api-kx3t.onrender.com'
     const user = (localStorage.getItem("User"))
     const auth = (localStorage.getItem("Token"))
     const [allJobs,setAllJobs] = useState(null)
