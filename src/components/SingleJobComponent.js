@@ -27,10 +27,10 @@ const SingleJobs = (props)=>{
         } catch (error) {
             if (error.response.status===401){
                 setErrorMessage({errType:"auth",isError:true,msg:error.response.data.msg})
-                setGlobalError({isError:true,msg:(<h1>Unauthenticated User Please <Link to='/login'>Log In</Link></h1>)})
+                setGlobalError({isError:true,msg:(<h2 style={{textAlign:"center"}}>Unauthenticated User Please <Link to='/login'>Log In</Link></h2>)})
             }else if(error.response.status===404){
                 setErrorMessage({errType:"notFound",isError:true,msg:error.response.data.msg})
-                setGlobalError({isError:true,msg:(<h1>No job with id:{ id} found please go to <Link to='/jobs'>Jobs</Link></h1>)})
+                setGlobalError({isError:true,msg:(<h2 style={{textAlign:"center"}}>No job with id:{ id} found please go to <Link to='/jobs'>Jobs</Link></h2>)})
             }else{
                 setErrorMessage({errType:"misc",isError:true,msg:"An error occured, please try again later"})
             }

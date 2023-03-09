@@ -3,6 +3,7 @@ import Home from './components/HomeComponent';
 import Jobs from './components/JobsComponent';
 import SingleJob from './components/SingleJobComponent';
 import {Login,Register} from './components/Login-RegisterComponent';
+import CreateNewJob from './components/CreateJobComponent';
 import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
@@ -28,10 +29,11 @@ function App() {
     return (
       <>
         <Routes>
-          <Route path='/'  element ={<Home authintcated={authintcated} />}/>
+          <Route exact path='/'  element ={<Home authintcated={authintcated} />}/>
           <Route path='/login' element ={<Login url={url} authintcated={authintcated} />}/>
           <Route path='/register'  element ={<Register url={url} authintcated={authintcated} />}/>
           <Route path='/jobs'  element ={<Jobs url={url} authintcated={authintcated} />}/>
+          <Route path='/jobs/create'  element ={<CreateNewJob url={url} authintcated={authintcated} />}/>
           <Route path='/jobs/:id'  element ={<SingleJob url={url} authintcated={authintcated} />}/>
         </Routes>
       </>
